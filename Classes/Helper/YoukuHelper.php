@@ -76,7 +76,7 @@ class YoukuHelper extends AbstractOnlineMediaHelper
             $title = preg_match('/<title[^>]*>(.*?)<\/title>/ims', $data, $matches) ? $matches[1] : null;
 
             self::$metaDataCache[$videoId] = [
-                'title' => $title
+                'title' => mb_substr($title, 0, mb_strpos($title, '—'))
             ];
         }
         return self::$metaDataCache[$videoId];
