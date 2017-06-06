@@ -55,7 +55,7 @@ class YoukuHelper extends AbstractOnlineMediaHelper
         // no existing file create new
         if ($file === null) {
             $data = $this->fetchMetaData($videoId);
-            if (!empty($oEmbed)) {
+            if (!empty($data)) {
                 $fileName = $data['title'] . '.' . $this->extension;
             } else {
                 $fileName = $videoId . '.' . $this->extension;
