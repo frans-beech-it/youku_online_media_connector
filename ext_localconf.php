@@ -3,9 +3,8 @@ defined('TYPO3_MODE') or ('Access denied.');
 
 call_user_func(function($packageKey) {
 
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['fal']['onlineMediaHelpers'] = [
-        'youku' => \BeechIt\YoukuOnlineMediaConnector\Helper\YoukuHelper::class,
-    ];
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['fal']['onlineMediaHelpers']['youku']
+        = \BeechIt\YoukuOnlineMediaConnector\Helper\YoukuHelper::class;
 
     // Custom mime type
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['FileInfo']['fileExtensionToMimeType']['youku'] = 'video/youku';
