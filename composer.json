@@ -4,8 +4,7 @@
 	"description": "Youku.com online media integration for TYPO3",
 	"license": ["GPL-2.0+"],
 	"require": {
-		"typo3/cms-core": "^7.6.0 || ^8.7",
-		"guzzlehttp/guzzle": "^6.0"
+		"typo3/cms-core": "^7.6.0 || ^8.7"
 	},
 	"replace": {
 		"youku_online_media_connector": "self.version",
